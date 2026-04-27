@@ -5,8 +5,8 @@ import streamlit as st
 
 
 load_dotenv(override=True)
-openai_api_key = os.getenv('OPENAI_API_KEY')
-openrouter_api_key = os.getenv('OPENROUTER_API_KEY')
+openai_api_key = os.getenv('OPENAI_API_KEY') or st.secrets["OPENAI_API_KEY"]
+openrouter_api_key = os.getenv('OPENROUTER_API_KEY') or st.secrets["OPENROUTER_API_KEY"]
 
 
 # Setting up the Streamlit page configuration
